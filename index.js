@@ -2,13 +2,19 @@ document.addEventListener("DOMContentLoaded", function ()
 {
     const pList = document.querySelectorAll(".product");
 
-    const list = document.getElementById("list");
+    const list = document.getElementById("list-ol");
 
     const price = document.getElementById("price");
+
+
     const discountText = document.getElementById("discountP");
+
     const totalPriceText = document.getElementById("total-price");
+
     const cField = document.getElementById("coupon-field");
+
     const applyBtn = document.getElementById("apply-btn");
+
     const makePurchaseBtn = document.getElementById("mPurchase");
 
     let totalPrice = 0;
@@ -26,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function ()
             listItem.textContent = sNumber + ". " + productName;
             list.appendChild(listItem);
 
-            price.textContent = "Total price: $" + totalPrice.toFixed(2);
+            price.textContent = "Total price: TK  " + totalPrice.toFixed(2);
 
             sNumber++;
 
@@ -50,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function ()
             discountText.textContent = "Discount: " + discount + "%";
 
 
-            totalPriceText.textContent = "Total: $" + discountedTotalPrice.toFixed(2);
+            totalPriceText.textContent = "Total: TK : " + discountedTotalPrice.toFixed(2);
 
 
             couponApplied = true;
